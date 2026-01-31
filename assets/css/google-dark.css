@@ -71,6 +71,35 @@ body {
     border-color: #8ab4f8;
 }
 
+/* Mobile responsiveness for header and tabs */
+@media (max-width: 768px) {
+    .google-header {
+        padding: 12px 10px 0;
+    }
+
+    .search-bar-container {
+        padding: 8px 10px;
+        border-radius: 12px;
+    }
+
+    .search-input {
+        font-size: 15px;
+    }
+
+    .search-tabs {
+        gap: 8px;
+        padding-bottom: 8px;
+    }
+
+    .tab-item {
+        padding-bottom: 6px;
+        font-size: 13px;
+    }
+
+    .site-info { gap: 8px; }
+    .site-icon-circle { width: 36px; height: 36px; }
+}
+
 /* --- 2. The Result Widget --- */
 .result-card {
     padding: 16px;

@@ -1,14 +1,14 @@
 function renderGoogleResult(post) {
     if (!post) return "";
 
-    // 🟢 NEW: Link to the detail page
-    const link = `detail.html?id=${post.id}`;
+    // Use absolute path so widgets work when rendered from root
+    const link = `/community/detail.html?id=${post.id}`;
 
     return `
     <div class="result-card">
         <div class="site-info">
-            <div class="site-icon-circle">
-                <img src="../assets/icon.png" style="width:18px; height:18px; object-fit:contain;">
+                <div class="site-icon-circle">
+                <img src="/assets/icon.png" style="width:18px; height:18px; object-fit:contain;">
             </div>
             <div class="site-name-block">
                 <span class="site-name">Nexus Community</span>

@@ -6,8 +6,8 @@ const CLOUDINARY_CLOUD_NAME = 'df8w2fain';
 function renderLostItem(item) {
     if (!item) return "";
 
-    // 🟢 NEW: Create the real link with the ID
-    const detailLink = `detail.html?id=${item.id}`;
+    // Use absolute path so widgets work when rendered from root
+    const detailLink = `/lost-and-found/detail.html?id=${item.id}`;
 
     // Handle image display with fallback
     let imageHtml = '';

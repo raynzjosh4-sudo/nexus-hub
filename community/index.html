@@ -34,13 +34,14 @@
         }
         
         .search-tabs {
-            padding: 0 20px;
+            padding: 0 12px;
         }
         
         .tab-item {
             color: #b0b0b0 !important;
             border-bottom: 2px solid transparent !important;
-            padding: 16px 0 !important;
+            padding: 10px 8px !important;
+            font-size: 13px !important;
         }
         
         .tab-item.active {
@@ -52,17 +53,37 @@
             color: #ffffff !important;
         }
         
-        /* Search Result Cards */
+        /* Search Result Cards - style similarly to Lost & Found */
         .google-result {
-            background: transparent !important;
-            border: none !important;
-            margin-bottom: 32px;
-            padding: 0 !important;
-            max-width: 600px;
+            background: #0f0a1a !important;
+            border: 1px solid #2d1b4e !important;
+            border-radius: 12px !important;
+            margin-bottom: 16px !important;
+            padding: 16px !important;
+            display: block !important;
+            width: 100% !important;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.35);
         }
-        
+
         .google-result:hover {
-            background: transparent !important;
+            transform: translateY(-4px);
+            transition: transform 0.18s ease;
+            border-color: #a855f7 !important;
+        }
+
+        /* Inner layout adjustments */
+        .google-result > div[style*="display: flex"] {
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .google-result img {
+            border-radius: 8px;
+            width: 160px;
+            height: 120px;
+            object-fit: cover;
+            flex-shrink: 0;
+            cursor: pointer;
         }
         
         .result-url {
@@ -71,6 +92,9 @@
         
         .result-title {
             color: #a855f7 !important;
+            font-size: 1.1rem !important;
+            font-weight: 600 !important;
+            margin: 6px 0 !important;
         }
         
         .result-description {
@@ -102,6 +126,18 @@
         /* Search Functionality */
         .search-input {
             cursor: text !important;
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 768px) {
+            .google-header { padding: 12px 8px 0 !important; }
+            .search-bar-container { padding: 8px 10px !important; border-radius: 12px; }
+            .search-input { font-size: 15px !important; }
+            .search-tabs { gap: 8px; }
+            .site-info { gap: 8px; }
+            .site-icon-circle { width: 36px; height: 36px; }
+            .google-result img { width: 110px; height: 86px; }
+            .result-title { font-size: 1rem !important; }
         }
 
         /* Scroll Hide Header */
@@ -253,7 +289,7 @@
                             <div style="font-size: 0.85rem; color: #8b5cf6; margin-bottom: 4px; line-height: 1.2;">
                                 Nexus Community · ${post.createdAt}
                             </div>
-                            <h3 class="result-title" style="margin: 4px 0; font-size: 1.25rem; font-weight: 500; color: #a855f7; cursor: pointer; line-height: 1.3;" onmouseover="this.style.color='#c084fc'" onmouseout="this.style.color='#a855f7'" onclick="window.location.href='detail.html?id=${post.id}&category=${post.category}'; return false;">
+                            <h3 class="result-title" style="margin: 4px 0; font-size: 1.25rem; font-weight: 500; color: #a855f7; cursor: pointer; line-height: 1.3;" onmouseover="this.style.color='#c084fc'" onmouseout="this.style.color='#a855f7'" onclick="window.location.href='/community/detail.html?id=${post.id}&category=${post.category}'; return false;">
                                 ${post.title}
                             </h3>
                             <p class="result-description" style="margin: 12px 0; font-size: 0.9rem; line-height: 1.6; color: #b0b0b0;">
@@ -267,7 +303,7 @@
                         </div>
                         ${post.image ? `
                             <div style="flex-shrink: 0;">
-                                <img src="${post.image}" alt="${post.title}" style="width: 160px; height: 120px; object-fit: cover; border-radius: 8px; cursor: pointer;" onclick="window.location.href='detail.html?id=${post.id}&category=${post.category}'; return false;">
+                                <img src="${post.image}" alt="${post.title}" style="width: 160px; height: 120px; object-fit: cover; border-radius: 8px; cursor: pointer;" onclick="window.location.href='/community/detail.html?id=${post.id}&category=${post.category}'; return false;">
                             </div>
                         ` : ''}
                     </div>
