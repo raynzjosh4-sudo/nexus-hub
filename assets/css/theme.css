@@ -1,0 +1,318 @@
+:root {
+    --primary: #7c3aed;       /* Deep Purple */
+    --accent: #a855f7;        /* Light Purple */
+    --dark: #2d1b4e;          /* Deep Purple Dark */
+    --light: #f3e8ff;         /* Light Purple Background */
+    --text-main: #2d1b4e;
+    --text-muted: #6b5b95;
+    
+    --font-heading: 'Plus Jakarta Sans', 'Inter', sans-serif; /* Modern SaaS Font */
+    --radius-lg: 24px;
+    --radius-full: 999px;
+    
+    --shadow-soft: 0 10px 40px -10px rgba(124, 58, 237, 0.15);
+}
+
+/* Base Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: #fff; color: var(--text-main); overflow-x: hidden; }
+
+/* Navigation (Glass Effect) */
+nav {
+    position: fixed;
+    top: 0; width: 100%; z-index: 1000;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding: 16px 0;
+    transition: 0.3s;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.nav-flex { display: flex; justify-content: space-between; align-items: center; }
+
+.logo-container { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.25rem; }
+.logo-icon { height: 32px; width: auto; }
+
+/* Typography (Like "SLEEP WELL" example) */
+h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 5vw, 5rem); /* Responsive Huge Text */
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--dark);
+    margin-bottom: 24px;
+}
+
+h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+p { font-size: 1.125rem; line-height: 1.7; color: var(--text-muted); max-width: 600px; }
+
+/* Buttons */
+.btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 14px 28px;
+    border-radius: var(--radius-full);
+    font-weight: 600; text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-primary { background: var(--dark); color: white; }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
+.btn-outline { border: 2px solid #e2e8f0; color: var(--dark); }
+.btn-outline:hover { border-color: var(--dark); background: transparent; }
+
+/* Section Layouts */
+.hero { padding: 160px 0 100px; text-align: center; }
+.feature-split { padding: 80px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.feature-split.reversed { direction: rtl; } /* Swaps image/text side */
+.feature-split.reversed > * { direction: ltr; } /* Fixes text direction inside */
+
+.feature-img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.5s;
+}
+.feature-img:hover { transform: scale(1.02); }
+
+/* Infinite Marquee (For Verified Shops) */
+.marquee-wrapper {
+    background: var(--light);
+    padding: 60px 0;
+    overflow: hidden;
+    position: relative;
+}
+.marquee-content {
+    display: flex;
+    gap: 40px;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+}
+/* Individual Shop Item */
+.shop-pill {
+    background: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    border: 1px solid #e2e8f0;
+    font-weight: 600;
+    color: var(--text-muted);
+    white-space: nowrap;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+@keyframes scroll { to { transform: translateX(-50%); } }
+
+/* Purple Theme Animations */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glowPulse {
+    0%, 100% { box-shadow: 0 0 20px rgba(124, 58, 237, 0.3), var(--shadow-soft); }
+    50% { box-shadow: 0 0 40px rgba(124, 58, 237, 0.6), var(--shadow-soft); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.hero { animation: fadeInUp 1s ease-out; }
+.feature-split { animation: slideInLeft 1s ease-out; }
+.feature-split.reversed { animation: slideInRight 1s ease-out; }
+
+@media (max-width: 768px) {
+    .feature-split { grid-template-columns: 1fr; text-align: center; direction: ltr !important; }
+    h1 { font-size: 2.5rem; }
+    p { margin: 0 auto; }
+
+
+
+    /* --- Community / Forum Styles --- */
+
+/* Layout */
+.pt-header { padding-top: 100px; } /* Space for fixed navbar */
+
+.forum-grid {
+    display: grid;
+    grid-template-columns: 240px 1fr; /* Sidebar | Content */
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.flex-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/* Sidebar */
+.category-sidebar {
+    position: sticky;
+    top: 100px; /* Sticks when scrolling */
+    height: fit-content;
+}
+
+.sidebar-title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+}
+
+.category-link {
+    display: block;
+    padding: 12px 16px;
+    color: var(--text-muted);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s;
+    margin-bottom: 4px;
+}
+
+.category-link:hover, 
+.category-link.active {
+    background: #f1f5f9;
+    color: var(--primary);
+}
+
+/* Post Cards */
+.post-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    cursor: pointer;
+}
+
+.post-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-color: var(--primary);
+}
+
+.post-meta {
+    display: flex;
+    gap: 12px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    align-items: center;
+}
+
+.post-tag {
+    background: #e0f2fe;
+    color: var(--primary);
+    padding: 4px 10px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.post-title {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.post-body {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limits text to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.post-footer {
+    margin-top: 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Loading & Empty States */
+.state-container {
+    text-align: center;
+    padding: 60px;
+    color: var(--text-muted);
+}
+.empty-box {
+    text-align: center;
+    padding: 60px;
+    background: #f8fafc;
+    border-radius: 16px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 800px) {
+    .forum-grid { grid-template-columns: 1fr; }
+    .category-sidebar { display: none; } /* Hide sidebar on mobile */
+    .mobile-hide { display: none; }
+}
+/* --- Single Discussion Page Styles --- */
+
+.discussion-container { max-width: 800px; margin: 40px auto; }
+
+.back-link { 
+    color: var(--text-muted); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; 
+    display: inline-flex; align-items: center; gap: 6px; font-weight: 500;
+}
+.back-link:hover { color: var(--primary); }
+
+/* Widget Styles */
+.full-post { 
+    background: white; border: 1px solid #e2e8f0; border-radius: 24px; 
+    padding: 40px; margin-bottom: 32px; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); 
+}
+.full-post h1 { 
+    font-size: 2.25rem; margin-bottom: 24px; line-height: 1.2; color: var(--dark); 
+}
+.full-post p { 
+    font-size: 1.125rem; color: var(--text-main); line-height: 1.8; 
+}
+
+.author-block { 
+    display: flex; align-items: center; gap: 12px; margin-bottom: 24px; 
+    padding-bottom: 24px; border-bottom: 1px solid #f1f5f9; 
+}
+.avatar-circle { 
+    width: 48px; height: 48px; background: #e0f2fe; color: var(--primary); 
+    border-radius: 50%; display: flex; align-items: center; justify-content: center; 
+    font-weight: 700; font-size: 1.2rem; 
+}
+
+.comments-section { border-top: 1px solid #e2e8f0; padding-top: 32px; }
+.comment-card { 
+    background: #f8fafc; border: 1px solid #f1f5f9; border-radius: 16px; 
+    padding: 20px; margin-bottom: 16px; 
+}
+.comment-header { 
+    display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; 
+}
+.comment-author { font-weight: 700; color: var(--dark); }
+.comment-date { color: var(--text-muted); }
+.comment-body { font-size: 1rem; color: var(--text-body); line-height: 1.6; }
+}

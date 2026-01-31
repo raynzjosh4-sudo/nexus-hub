@@ -1,0 +1,204 @@
+{
+  "businesses": [
+    {
+      "name": "Uganda Shoes Co.",
+      "domain": "shoe.nexassearch.com",
+      "image": "shoes.jpg"
+    },
+    {
+      "name": "Kampala Fashion Hub",
+      "domain": "fashion.nexassearch.com",
+      "image": "fashion.jpg"
+    },
+    {
+      "name": "Nexus Electronics",
+      "domain": "electronics.nexassearch.com",
+      "image": "electronics.jpg"
+    },
+    {
+      "name": "Books & More",
+      "domain": "books.nexassearch.com",
+      "image": "books.jpg"
+    },
+    {
+      "name": "Kitchen Essentials",
+      "domain": "kitchen.nexassearch.com",
+      "image": "kitchen.jpg"
+    },
+    {
+      "name": "Home Decor Plus",
+      "domain": "homedecor.nexassearch.com",
+      "image": "homedecor.jpg"
+    },
+    {
+      "name": "Sports & Gear",
+      "domain": "sports.nexassearch.com",
+      "image": "sports.jpg"
+    },
+    {
+      "name": "Beauty & Wellness",
+      "domain": "beauty.nexassearch.com",
+      "image": "beauty.jpg"
+    },
+    {
+      "name": "Tech Gadgets Store",
+      "domain": "gadgets.nexassearch.com",
+      "image": "gadgets.jpg"
+    },
+    {
+      "name": "Jewelry Box",
+      "domain": "jewelry.nexassearch.com",
+      "image": "jewelry.jpg"
+    },
+    {
+      "name": "Auto Parts Hub",
+      "domain": "autoparts.nexassearch.com",
+      "image": "autoparts.jpg"
+    },
+    {
+      "name": "Garden & Plants",
+      "domain": "garden.nexassearch.com",
+      "image": "garden.jpg"
+    },
+    {
+      "name": "Pet Paradise",
+      "domain": "pets.nexassearch.com",
+      "image": "pets.jpg"
+    },
+    {
+      "name": "Toys & Games",
+      "domain": "toys.nexassearch.com",
+      "image": "toys.jpg"
+    },
+    {
+      "name": "Music Store",
+      "domain": "music.nexassearch.com",
+      "image": "music.jpg"
+    },
+    {
+      "name": "Luggage & Travel",
+      "domain": "luggage.nexassearch.com",
+      "image": "luggage.jpg"
+    },
+    {
+      "name": "Office Supplies",
+      "domain": "office.nexassearch.com",
+      "image": "office.jpg"
+    },
+    {
+      "name": "Baby Store",
+      "domain": "baby.nexassearch.com",
+      "image": "baby.jpg"
+    },
+    {
+      "name": "Fitness Equipment",
+      "domain": "fitness.nexassearch.com",
+      "image": "fitness.jpg"
+    },
+    {
+      "name": "Coffee & Tea",
+      "domain": "coffee.nexassearch.com",
+      "image": "coffee.jpg"
+    },
+    {
+      "name": "Organic Foods",
+      "domain": "organicfoods.nexassearch.com",
+      "image": "organic.jpg"
+    },
+    {
+      "name": "Phone Repairs",
+      "domain": "phonerepair.nexassearch.com",
+      "image": "phonerepair.jpg"
+    },
+    {
+      "name": "Watch & Clock",
+      "domain": "watches.nexassearch.com",
+      "image": "watches.jpg"
+    },
+    {
+      "name": "Bags & Backpacks",
+      "domain": "bags.nexassearch.com",
+      "image": "bags.jpg"
+    },
+    {
+      "name": "Paint & Hardware",
+      "domain": "hardware.nexassearch.com",
+      "image": "hardware.jpg"
+    },
+    {
+      "name": "School Uniforms",
+      "domain": "uniforms.nexassearch.com",
+      "image": "uniforms.jpg"
+    },
+    {
+      "name": "Craft Supplies",
+      "domain": "crafts.nexassearch.com",
+      "image": "crafts.jpg"
+    },
+    {
+      "name": "Furniture Store",
+      "domain": "furniture.nexassearch.com",
+      "image": "furniture.jpg"
+    },
+    {
+      "name": "Camera Shop",
+      "domain": "cameras.nexassearch.com",
+      "image": "cameras.jpg"
+    },
+    {
+      "name": "Cosmetics Hub",
+      "domain": "cosmetics.nexassearch.com",
+      "image": "cosmetics.jpg"
+    },
+    {
+      "name": "Video Games",
+      "domain": "games.nexassearch.com",
+      "image": "games.jpg"
+    },
+    {
+      "name": "Textile & Fabric",
+      "domain": "fabric.nexassearch.com",
+      "image": "fabric.jpg"
+    },
+    {
+      "name": "Bicycle Shop",
+      "domain": "bicycles.nexassearch.com",
+      "image": "bicycles.jpg"
+    },
+    {
+      "name": "Stationery World",
+      "domain": "stationery.nexassearch.com",
+      "image": "stationery.jpg"
+    },
+    {
+      "name": "Glasses & Frames",
+      "domain": "eyewear.nexassearch.com",
+      "image": "eyewear.jpg"
+    },
+    {
+      "name": "Tool Masters",
+      "domain": "tools.nexassearch.com",
+      "image": "tools.jpg"
+    },
+    {
+      "name": "Luggage Repair",
+      "domain": "luggagerepair.nexassearch.com",
+      "image": "luggagerepair.jpg"
+    },
+    {
+      "name": "Fabric Printing",
+      "domain": "printing.nexassearch.com",
+      "image": "printing.jpg"
+    },
+    {
+      "name": "Perfume & Scents",
+      "domain": "perfume.nexassearch.com",
+      "image": "perfume.jpg"
+    },
+    {
+      "name": "Sports Shoes",
+      "domain": "sportshoes.nexassearch.com",
+      "image": "sportshoes.jpg"
+    }
+  ]
+}
