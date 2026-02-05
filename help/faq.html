@@ -349,6 +349,7 @@
         }
     }
 
+
     function renderFAQ() {
         const container = document.getElementById('faq-container');
         
@@ -399,7 +400,6 @@
         setupSearch();
         generateFAQSchema();
         
-        // Update page meta tags
         document.title = "Help & FAQ - Nexus";
         let metaDesc = document.querySelector('meta[name="description"]');
         if (!metaDesc) {

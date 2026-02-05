@@ -30,5 +30,4 @@ const MOCK_POSTS = [
             { author: "Sarah N.", time: "2 hours ago", text: "Please share this on Twitter too, tags work better there." }
         ]
     },
-    // ... keep the rest of your items ...
 ];
