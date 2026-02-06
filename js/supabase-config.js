@@ -6,11 +6,7 @@ const SUPABASE_CONFIG = {
     anonKey: 'YOUR_SUPABASE_ANON_KEY_HERE'
 };
 
-// Example:
-// const SUPABASE_CONFIG = {
-//     url: 'https://your-project.supabase.co',
-//     anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...'
-// };
+
 
 // Export for use in other files
 if (typeof module !== 'undefined' && module.exports) {
