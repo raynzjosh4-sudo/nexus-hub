@@ -3,11 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Find lost and found items on Nexus. Report or claim lost belongings including documents, devices, accessories and pets.">
+    <meta name="description" id="meta-description" content="Find lost and found items on Nexus. Report or claim lost belongings including documents, devices, accessories and pets.">
     <meta name="keywords" content="lost items, found items, lost and found, lost ID, lost phone, Kampala Uganda">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Nexus">
-    <title>Lost Item Details - Nexus</title>
+    <meta property="og:title" id="og-title" content="Lost Item Details - Nexus">
+    <meta property="og:description" id="og-description" content="Find lost and found items on Nexus">
+    <meta property="og:image" id="og-image" content="">
+    <meta property="og:url" id="og-url" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" id="twitter-title" content="Lost Item Details - Nexus">
+    <meta name="twitter:description" id="twitter-description" content="Find lost and found items on Nexus">
+    <meta name="twitter:image" id="twitter-image" content="">
+    <title id="page-title">Lost Item Details - Nexus</title>
     <link rel="icon" type="image/png" href="../assets/icon.png">
     <link rel="stylesheet" href="../assets/css/google-dark.css">
     <style>
@@ -274,6 +282,17 @@
     
     // SEO Helper Functions
     function updateOGTags(data) {
+        // Update by ID for better targeting
+        const idMap = {
+            'og:title': 'og-title',
+            'og:description': 'og-description',
+            'og:image': 'og-image',
+            'og:url': 'og-url',
+            'twitter:title': 'twitter-title',
+            'twitter:description': 'twitter-description',
+            'twitter:image': 'twitter-image'
+        };
+        
         const tags = [
             { property: 'og:title', content: data.title },
             { property: 'og:description', content: data.description },
@@ -286,12 +305,22 @@
         ];
         
         tags.forEach(tag => {
-            let element = document.querySelector(`meta[property="${tag.property}"]`);
+            // Try to find by ID first
+            let element = idMap[tag.property] ? document.getElementById(idMap[tag.property]) : null;
+            
+            // Fall back to property search if not found by ID
+            if (!element) {
+                element = document.querySelector(`meta[property="${tag.property}"]`);
+            }
+            
+            // Create if still not found
             if (!element) {
                 element = document.createElement('meta');
                 element.setAttribute('property', tag.property);
+                element.setAttribute('id', idMap[tag.property] || '');
                 document.head.appendChild(element);
             }
+            
             element.setAttribute('content', tag.content);
         });
     }
@@ -384,14 +413,20 @@
         const container = document.getElementById('detail-content');
         
         // Update page title and meta tags for SEO
-        document.title = `${item.title} - Lost & Found | Nexus`;
+        const pageTitle = `${item.title} - Lost & Found | Nexus`;
+        document.title = pageTitle;
+        const pageTitleElement = document.getElementById('page-title');
+        if (pageTitleElement) {
+            pageTitleElement.textContent = pageTitle;
+        }
         
         // Update meta description
         const description = (item.description || item.title).substring(0, 155);
-        let metaDescription = document.querySelector('meta[name="description"]');
+        let metaDescription = document.getElementById('meta-description');
         if (!metaDescription) {
             metaDescription = document.createElement('meta');
             metaDescription.setAttribute('name', 'description');
+            metaDescription.setAttribute('id', 'meta-description');
             document.head.appendChild(metaDescription);
         }
         metaDescription.setAttribute('content', `${item.title} - ${description}`);
